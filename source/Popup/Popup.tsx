@@ -10,16 +10,7 @@ function openWebPage(url: string): Promise<Tabs.Tab> {
 const Popup: React.FC = () => {
   return (
     <section id="popup">
-      <h2>WEB-EXTENSION-STARTER</h2>
-      <button
-        id="options__button"
-        type="button"
-        onClick={(): Promise<Tabs.Tab> => {
-          return openWebPage('options.html');
-        }}
-      >
-        Options Page
-      </button>
+      <h2>IMidMan Extension</h2>
       <div className="links__holder">
         <ul>
           <li>

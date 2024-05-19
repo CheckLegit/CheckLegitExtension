@@ -11,11 +11,11 @@
   },
   "description": "",
   "homepage_url": "https://github.com/iMidMan/iMidManExtension",
-  "short_name": "",
-
+  "short_name": "imidman-ext",
   "permissions": [
     "activeTab",
     "storage",
+    "contextMenus",
     "http://*/*",
     "https://*/*"
   ],
@@ -57,19 +57,14 @@
   },
 
   "background": {
-    "scripts": [
-      "js/background.bundle.js"
-    ],
+    "scripts": ["js/background.bundle.js"],
     "__chrome|opera__persistent": false
   },
 
-  "content_scripts": [{
-    "matches": [
-      "http://*/*",
-      "https://*/*"
-    ],
-    "js": [
-      "js/contentScript.bundle.js"
-    ]
-  }]
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/contentScript.bundle.js"]
+    }
+  ]
 }
